@@ -26,13 +26,13 @@
     </div>
     <script>
         // Check if the form has been submitted before
-        if (localStorage.getItem('formSubmitted') === 'true') {
+        if (sessionStorage.getItem('formSubmitted') === 'true') {
             window.location.href = 'thankyou.html';
         }
-
-        // Set the flag in localStorage when the form is submitted
+    
+        // Set the flag in sessionStorage when the form is submitted
         document.getElementById('contactForm').addEventListener('submit', function() {
-            localStorage.setItem('formSubmitted', 'true');
+            sessionStorage.setItem('formSubmitted', 'true');
         });
     </script>
 </body>
